@@ -38,4 +38,4 @@ const updateDepartment=async(id,payLOad)=>{
     return result
 }
 
-export const DepartmentService={createDepartmentIntoDb,getAllDepartmentFromDb,getSingleDeparmentFromDb,updateDepartment}
+export const DepartmentService={createDepartmentIntoDb,getAllDepartmentFromDb,getSingleDeparmentFromDb,updateDepartment,deleteDepartmentInDb}
