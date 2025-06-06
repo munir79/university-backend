@@ -16,6 +16,8 @@ const createDepartMentControllers=async(req,res,next)=>{
 }
 
 //  get all departmentControllers
+
+
 const getAllDepartmentControllers=async(req,res,next)=>{
    try{
      const result=await DepartmentService.getAllDepartmentFromDb();

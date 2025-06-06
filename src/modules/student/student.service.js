@@ -1,5 +1,5 @@
 import { DepartmentModel } from "../department/departmnet.model.js";
-import { SemistarModel } from "../semistar/semistar.model";
+import { SemistarModel } from "../semistar/semistar.model.js";
 import { SessionModel } from "../sessions/session.model.js";
 import { Student } from "./student.model.js";
 import generateStudentId from "./student.utils.js";
@@ -45,4 +45,38 @@ const CreateStudent = async (payLoad) => {
   return student;
 };
 
-export const StudentService={CreateStudent};
+//  get all student from db 
+
+const getAllStudentFromDb=async()=>{
+    const result =await Student.find()
+    .populate({
+        path:'academicDepartment',
+        populate:{
+            path:'faculty'
+        }
+    })
+    .populate('academicSession')
+    .populate('academicSemistar')
+    
+   
+  
+     return result;
+}
+
+
+// get single student from db 
+
+const getSingleStudentFromDb=async(id)=>{
+    const result =await Student.findById(id)
+    .populate({
+        path:'academicDepartment',
+        populate:{
+            path:'faculty'
+        }
+       
+    })
+     .populate('academicSemistar')
+        .populate('academicSession')
+     return result;
+}
+export const StudentService={CreateStudent,getAllStudentFromDb,getSingleStudentFromDb};
