@@ -1,4 +1,4 @@
-import { DepartmentService } from "./department.service"
+import { DepartmentService } from "./department.service.js"
 
 const createDepartMentControllers=async(req,res,next)=>{
    try{

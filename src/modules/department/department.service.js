@@ -1,4 +1,4 @@
-import { DepartmentModel } from "./departmnet.model"
+import { DepartmentModel } from "./departmnet.model.js"
 
 const createDepartmentIntoDb=async(payLoad)=>{
     const result=await DepartmentModel.create(payLoad);

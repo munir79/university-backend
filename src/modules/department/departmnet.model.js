@@ -9,9 +9,9 @@ const departmentSchema=new mongoose.Schema({
     },
   faculty:{
     type:mongoose.Schema.Types.ObjectId,
-    ref:'FacultyModel',
+    ref:'faculty',
     required:true,
-    
+
   }
 },
 {

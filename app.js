@@ -4,6 +4,7 @@ import globalErrorHandelar from './src/middleware/globalerrorHandelar.js';
 import notFound from './src/middleware/notfound.js';
 import { FacultyRouter } from './src/modules/faculty/faculty.route.js';
 import { DepartmnetRoute } from './src/modules/department/department.route.js';
+import { SemistartRoute } from './src/modules/semistar/semistar.route.js';
 
 const app =express();
 
@@ -15,7 +16,8 @@ app.use(express.json());
 
 // application route 
 app.use('/api/v1/faculty',FacultyRouter);
-app.use('/api/v1/departmet',DepartmnetRoute)
+app.use('/api/v1/departmet',DepartmnetRoute);
+app.use('/api/v1/semistar',SemistartRoute)
 
 
 // global error Handelar 

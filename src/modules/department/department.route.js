@@ -1,7 +1,7 @@
 
 
 import express from 'express';
-import { DepartmentControllers } from './department.controllers';
+import { DepartmentControllers } from './department.controllers.js';
  const router=express.Router();
 
  router.post('/create-department',DepartmentControllers.createDepartMentControllers);
