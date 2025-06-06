@@ -1,4 +1,4 @@
-import { SessionServices } from "./session.service";
+import { SessionServices } from "./session.service.js";
 
 
 export const createSessionControllers = async (req, res,next) => {
